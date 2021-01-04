@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private float _moveHorizontal = 0.0f;
     private float _moveVertical = 0.0f;
 
-    private bool IsOnTheGround = true;
+    private bool IsOnThePlatform = true;
 
     void Start()
     {
@@ -27,10 +27,10 @@ public class PlayerController : MonoBehaviour
 
         Vector3 direction = new Vector3(_moveHorizontal, 0.0f, _moveVertical);
 
-        if (Input.GetButtonDown("Jump") && IsOnTheGround == true)
+        if (Input.GetButtonDown("Jump") && IsOnThePlatform == true)
         {
             _rigidbody.AddForce(new Vector3(0.0f, JumpHeight, 0.0f), ForceMode.Impulse);
-            IsOnTheGround = false;
+            IsOnThePlatform = false;
         }
 
         _rigidbody.AddForce(direction * MovementSpeed);
@@ -38,9 +38,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Platform")
         {
-            IsOnTheGround = true;
+            IsOnThePlatform = true;
         }
     }
 }

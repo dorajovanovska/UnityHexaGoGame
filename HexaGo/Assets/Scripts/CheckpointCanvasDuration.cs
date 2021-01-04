@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CheckpointDuration : MonoBehaviour
+public class CheckpointCanvasDuration : MonoBehaviour
 {
     private float CurrentTime = 0.0f;
     readonly private float StartingTime = 2.5f;
