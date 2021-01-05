@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void UpdateScore(int value)
-    {   
+    {
         Score += value;
 
         if (Score  < 0)
