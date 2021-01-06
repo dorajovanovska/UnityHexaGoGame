@@ -7,7 +7,10 @@ public class HealthManager : MonoBehaviour
 {
     public int StartingHealth = 0;
     public int Health = 0;
-    public int NumberOfLives = 2;
+    public int NumberOfLives = 3;
+
+    [HideInInspector]
+    public bool PlayerDied = false;
 
     public Vector3 _startingPosition;
 
@@ -33,6 +36,8 @@ public class HealthManager : MonoBehaviour
     {
         Health = StartingHealth;
         NumberOfLives--;
+
+        PlayerDied = true;
 
         LivesText.text = "Lives: " + NumberOfLives.ToString();
 
