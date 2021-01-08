@@ -27,6 +27,13 @@ public class PlayerController : MonoBehaviour
 
         Vector3 direction = new Vector3(_moveHorizontal, 0.0f, _moveVertical);
 
+        TurboMode turbomode = GetComponent<TurboMode>();
+        if (turbomode.turboAndPlayerColided == true)
+        {
+            MovementSpeed = turbomode.movementSpeedTurbo;
+            JumpHeight = turbomode.jumpHeightTurbo;
+        }
+
         if (Input.GetButtonDown("Jump") && IsOnThePlatform == true)
         {
             _rigidbody.AddForce(new Vector3(0.0f, JumpHeight, 0.0f), ForceMode.Impulse);
