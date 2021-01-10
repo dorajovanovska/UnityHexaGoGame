@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public int Value = 10;
+    public int Value = 25;
     public AudioClip PickupAudioClip;
     public ParticleSystem CoinParticleSystem;
 

@@ -24,6 +24,8 @@ public class Checkpoint : MonoBehaviour
         }
 
         else healthManager._startingPosition = RespawnTransform.position;
+
+        Destroy(gameObject);
     }
 
     IEnumerator ClipPlayed()

@@ -2144,6 +2144,11 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 991914295}
+    - target: {fileID: 5690175700508582696, guid: 65fa7f330447def46a73c335fed459b0,
+        type: 3}
+      propertyPath: Value
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5690175700508582701, guid: 65fa7f330447def46a73c335fed459b0,
         type: 3}
       propertyPath: m_Name
@@ -3549,6 +3554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 2181028354811864275, guid: cc43e6b126e1fbe4696e9cb145689bf7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Checkpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 2181028354811864280, guid: cc43e6b126e1fbe4696e9cb145689bf7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3722,6 +3732,11 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 991914295}
+    - target: {fileID: 5690175700508582696, guid: 65fa7f330447def46a73c335fed459b0,
+        type: 3}
+      propertyPath: Value
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5690175700508582701, guid: 65fa7f330447def46a73c335fed459b0,
         type: 3}
       propertyPath: m_Name

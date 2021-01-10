@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private float _moveVertical = 0.0f;
 
     private bool IsOnThePlatform = true;
+    [HideInInspector]
+    public bool PlayerCheckpointTrigger = false;
 
     private float MovementAfterTurbo = 0.0f;
     private float JumpHeightAfterTurbo = 0.0f;
@@ -64,6 +66,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             IsOnThePlatform = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Checkpoint")
+        {
+            PlayerCheckpointTrigger = true;
         }
     }
 

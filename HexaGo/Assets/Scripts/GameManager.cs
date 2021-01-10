@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         Score += value;
 
-        if (Score  < 0)
+        if (Score < 0)
         {
             Score = 0;
         }

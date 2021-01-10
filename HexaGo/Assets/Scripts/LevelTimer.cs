@@ -17,6 +17,8 @@ public class LevelTimer : MonoBehaviour
 
     private bool timerFinishedIsTrue = false;
 
+    private int timerDurationAfterChekpoint = 0;
+
     private void Start()
     {
         secondsLeft = timerDuration;
@@ -28,7 +30,7 @@ public class LevelTimer : MonoBehaviour
     {
         if (takingAway == false && secondsLeft > 0)
         {
-            StartCoroutine(TimerTake());  
+            StartCoroutine(TimerTake());
         }
 
         if (secondsLeft == 0 && timerFinishedIsTrue == false)
@@ -70,7 +72,16 @@ public class LevelTimer : MonoBehaviour
         secondsLeft -= 1;
 
         TimeFormat();
-       
+
+        PlayerController playerController = GetComponent<PlayerController>();
+        if (playerController.PlayerCheckpointTrigger == true)
+        {
+            timerDurationAfterChekpoint = secondsLeft;
+            secondsLeft = timerDurationAfterChekpoint;
+            timerDuration = timerDurationAfterChekpoint;
+        }
+        playerController.PlayerCheckpointTrigger = false;
+
         takingAway = false;
     }
 
