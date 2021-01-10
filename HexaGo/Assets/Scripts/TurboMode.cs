@@ -8,10 +8,14 @@ public class TurboMode : MonoBehaviour
     public GameObject Player;
     public GameObject Turbo;
     public Animator turboCollectedFadeOut;
+    public Animator turboCanvasFadeIn;
+    public Animator turboCanvasFadeOut;
+    public Animator turboCanvasNull;
     public AudioClip turboAudioClip;
 
-    public float movementSpeedTurbo = 10.0f;
-    public float jumpHeightTurbo = 15.0f;
+    public float movementSpeedTurbo = 20.0f;
+    public float jumpHeightTurbo = 20.0f;
+    public int turboDuration = 3;
 
     [HideInInspector]
     public bool turboAndPlayerColided = false;
@@ -22,6 +26,7 @@ public class TurboMode : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(turboAudioClip, transform.position);
             turboCollectedFadeOut.SetTrigger("TurboCollectedFadeOut");
+            turboCanvasFadeIn.SetTrigger("TurboCanvasFadeIn");
             turboAndPlayerColided = true;
             Destroy(Turbo);
         }

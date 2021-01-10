@@ -45,7 +45,6 @@ public class LevelTimer : MonoBehaviour
         if (healthManager.PlayerDied == true)
         {
             StartCoroutine(PlayerDied());
-            //Debug.Log("Player dead");
             secondsLeft = timerDuration + secondDuration;
         }
     }

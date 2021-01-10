@@ -7,17 +7,25 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody _rigidbody;
 
-    public float MovementSpeed = 5.0f;
-    public float JumpHeight = 10.0f;
+    public float MovementSpeed = 10.0f;
+    public float JumpHeight = 15.0f;
 
     private float _moveHorizontal = 0.0f;
     private float _moveVertical = 0.0f;
 
     private bool IsOnThePlatform = true;
 
+    private float MovementAfterTurbo = 0.0f;
+    private float JumpHeightAfterTurbo = 0.0f;
+
+    private bool turboFinished = false;
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+
+        MovementAfterTurbo = MovementSpeed;
+        JumpHeightAfterTurbo = JumpHeight;
     }
 
     void Update()
@@ -30,8 +38,16 @@ public class PlayerController : MonoBehaviour
         TurboMode turbomode = GetComponent<TurboMode>();
         if (turbomode.turboAndPlayerColided == true)
         {
-            MovementSpeed = turbomode.movementSpeedTurbo;
-            JumpHeight = turbomode.jumpHeightTurbo;
+            if(turboFinished == false)
+            {
+                StartCoroutine(TurboDuration());
+            }
+        }
+
+        if (turbomode.turboAndPlayerColided == false)
+        {
+            MovementSpeed = MovementAfterTurbo;
+            JumpHeight = JumpHeightAfterTurbo;
         }
 
         if (Input.GetButtonDown("Jump") && IsOnThePlatform == true)
@@ -49,5 +65,31 @@ public class PlayerController : MonoBehaviour
         {
             IsOnThePlatform = true;
         }
+    }
+
+    IEnumerator TurboDuration()
+    {
+        turboFinished = false;
+
+        TurboMode turbomode = GetComponent<TurboMode>();
+        MovementSpeed = turbomode.movementSpeedTurbo;
+        JumpHeight = turbomode.jumpHeightTurbo;
+
+        HealthManager healthmanager = GetComponent<HealthManager>();
+
+        if(healthmanager.PlayerDied == true)
+        {
+            turbomode.turboAndPlayerColided = false;
+            turboFinished = true;
+            turbomode.turboCanvasNull.SetTrigger("TurboCanvasNull");
+        }
+
+        yield return new WaitForSeconds(turbomode.turboDuration);
+
+        turbomode.turboAndPlayerColided = false;
+
+        turboFinished = true;
+
+        turbomode.turboCanvasFadeOut.SetTrigger("TurboCanvasFadeOut");
     }
 }
