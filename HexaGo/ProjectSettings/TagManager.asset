@@ -8,6 +8,8 @@ TagManager:
   - Platform
   - Turbo
   - Checkpoint
+  - ExtraLifeCoin
+  - LevelUpCoin
   layers:
   - Default
   - TransparentFX

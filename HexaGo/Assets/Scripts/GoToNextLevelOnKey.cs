@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GoToNextLevelOnKey : MonoBehaviour
 {
-    public Animator transition;
+    public Animator transition_canvas;
     public Animator transition_score;
     public Animator transition_lives;
+    public Animator transition_levelup;
     public Animator transition_countdown;
     public float end_duration = 0.1f;
 
@@ -24,7 +25,8 @@ public class GoToNextLevelOnKey : MonoBehaviour
     {
         transition_score.SetTrigger("ScoreTextFadeOut");
         transition_lives.SetTrigger("LivesTextFadeOut");
-        transition.SetTrigger("FadeOutTrigger");
+        transition_levelup.SetTrigger("LevelUpFadeOutTrigger");
+        transition_canvas.SetTrigger("FadeOutTrigger");
         transition_countdown.SetTrigger("CountFadeOut");
         yield return new WaitForSeconds(end_duration);
         SceneManager.LoadScene("Level_02");

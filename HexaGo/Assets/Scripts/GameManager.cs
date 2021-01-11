@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public int Score = 0;
+    public int Life = 0;
     public Text ScoreText;
     public GameObject GameOverCanvas;
 

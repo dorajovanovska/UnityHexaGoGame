@@ -15,6 +15,7 @@ public class TurboMode : MonoBehaviour
 
     public float movementSpeedTurbo = 20.0f;
     public float jumpHeightTurbo = 20.0f;
+    [Tooltip("Duration of Turbo Mode in seconds.")]
     public int turboDuration = 3;
 
     [HideInInspector]

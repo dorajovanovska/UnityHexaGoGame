@@ -50,4 +50,10 @@ public class HealthManager : MonoBehaviour
             LivesText.text = "Lives: 0";
         }
     }
+
+    public void AddExtraLife()
+    {
+        NumberOfLives++;
+        LivesText.text = "Lives: " + NumberOfLives.ToString();
+    }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float _moveVertical = 0.0f;
 
     private bool IsOnThePlatform = true;
+
     [HideInInspector]
     public bool PlayerCheckpointTrigger = false;
 
@@ -21,6 +23,16 @@ public class PlayerController : MonoBehaviour
     private float JumpHeightAfterTurbo = 0.0f;
 
     private bool turboFinished = false;
+
+    private int hexaCounter = 0;
+
+    public Text LevelUpText;
+
+    [HideInInspector]
+    public int hexaGoal = 5;
+
+    [HideInInspector]
+    public bool hexaGoalTrue = false;
 
     void Start()
     {
@@ -75,7 +87,31 @@ public class PlayerController : MonoBehaviour
         {
             PlayerCheckpointTrigger = true;
         }
+
+        if(other.gameObject.tag == "ExtraLifeCoin")
+        {
+            HealthManager healthManager = GetComponent<HealthManager>();
+            healthManager.AddExtraLife();
+        }
+
+        if(other.gameObject.tag == "LevelUpCoin")
+        {
+            hexaCounter++;
+            LevelUpText.text = "Goal: " + hexaCounter + "/5";
+
+            if (hexaCounter == hexaGoal)
+            {
+                hexaGoalTrue = true;
+            }
+
+            if(hexaCounter > hexaGoal)
+            {
+                hexaCounter = hexaGoal;
+                LevelUpText.text = "Goal: " + hexaCounter + "/5";
+            }
+        }
     }
+
 
     IEnumerator TurboDuration()
     {
