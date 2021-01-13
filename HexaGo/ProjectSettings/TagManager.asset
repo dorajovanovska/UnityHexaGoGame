@@ -10,6 +10,7 @@ TagManager:
   - Checkpoint
   - ExtraLifeCoin
   - LevelUpCoin
+  - BlackHole
   layers:
   - Default
   - TransparentFX

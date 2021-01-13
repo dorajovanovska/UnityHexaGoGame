@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool hexaGoalTrue = false;
 
+    [HideInInspector]
+    public bool playerBlackHoleTrigger = false;
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -109,6 +112,11 @@ public class PlayerController : MonoBehaviour
                 hexaCounter = hexaGoal;
                 LevelUpText.text = "Goal: " + hexaCounter + "/5";
             }
+        }
+
+        if(other.gameObject.tag == "BlackHole")
+        {
+            playerBlackHoleTrigger = true;
         }
     }
 
