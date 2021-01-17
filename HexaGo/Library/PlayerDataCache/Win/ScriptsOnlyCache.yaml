@@ -292,6 +292,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -955,7 +959,7 @@ ScriptsOnlyBuild:
     className: VertexShakeB
   - hash:
       serializedVersion: 2
-      Hash: 309b209612f08ef37076ab395f32f332
+      Hash: 269a2421d5cf5cd4526a27e91a99faf6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthManager

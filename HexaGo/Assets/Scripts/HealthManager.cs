@@ -12,6 +12,9 @@ public class HealthManager : MonoBehaviour
     [HideInInspector]
     public bool PlayerDied = false;
 
+    [HideInInspector]
+    public bool PlayerDeath = false;
+
     public Vector3 _startingPosition;
 
     public Text LivesText;
@@ -38,6 +41,8 @@ public class HealthManager : MonoBehaviour
         NumberOfLives--;
 
         PlayerDied = true;
+
+        PlayerDeath = true;
 
         LivesText.text = "Lives: " + NumberOfLives.ToString();
 

@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
 
         HealthManager healthmanager = GetComponent<HealthManager>();
 
-        if(healthmanager.PlayerDied == true)
+        if(healthmanager.PlayerDeath == true)
         {
             turbomode.turboAndPlayerColided = false;
             turboFinished = true;
