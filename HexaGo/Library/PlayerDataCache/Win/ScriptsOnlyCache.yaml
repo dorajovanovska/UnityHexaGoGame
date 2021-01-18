@@ -15,6 +15,7 @@ ScriptsOnlyBuild:
     - LevelUpCoins
     - MainMenu
     - NegativeCoins
+    - PlaySoundOnButton
     - PlayerController
     - RotateAroundTarget
     - StartLevelCanvas
@@ -57,12 +58,17 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/IntroVideo.unity:
     - Class: 1
@@ -104,7 +110,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13290}
     - Class: 114
-      Script: {instanceID: 13400}
+      Script: {instanceID: 13402}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,11 +225,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13318}
     - Class: 114
-      Script: {instanceID: 13400}
+      Script: {instanceID: 13402}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -307,11 +313,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11330}
     - Class: 114
+      Script: {instanceID: 11516}
+    - Class: 114
       Script: {instanceID: 11556}
+    - Class: 114
+      Script: {instanceID: 11782}
     - Class: 114
       Script: {instanceID: 11986}
     - Class: 114
+      Script: {instanceID: 12208}
+    - Class: 114
       Script: {instanceID: 12432}
+    - Class: 114
+      Script: {instanceID: 12534}
     - Class: 114
       Script: {instanceID: 12678}
     - Class: 114
@@ -321,7 +335,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12984}
     - Class: 114
-      Script: {instanceID: 13400}
+      Script: {instanceID: 13340}
+    - Class: 114
+      Script: {instanceID: 13362}
+    - Class: 114
+      Script: {instanceID: 13402}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1107,6 +1125,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: e7abec8fc2d7f7b2a5934dfc7311a1fc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlaySoundOnButton
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1189,4 +1213,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Level_01.unity
   - Assets/Scenes/Level_02.unity
-  playerPath: C:/Users/Dora/Desktop/New folder/RollingBall.exe
+  playerPath: C:/Users/Dora/Desktop/New folder (2)/RollingBall.exe
