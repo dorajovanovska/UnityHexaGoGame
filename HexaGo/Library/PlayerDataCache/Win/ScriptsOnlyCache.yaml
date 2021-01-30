@@ -15,6 +15,7 @@ ScriptsOnlyBuild:
     - LevelUpCoins
     - MainMenu
     - NegativeCoins
+    - PauseLevelCanvas
     - PlaySoundOnButton
     - PlayerController
     - RotateAroundTarget
@@ -49,8 +50,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -100,17 +103,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 12678}
+      Script: {instanceID: 12680}
     - Class: 114
-      Script: {instanceID: 12694}
+      Script: {instanceID: 12696}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13166}
     - Class: 114
-      Script: {instanceID: 13290}
+      Script: {instanceID: 13292}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -201,35 +204,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12622}
+      Script: {instanceID: 12502}
     - Class: 114
-      Script: {instanceID: 12628}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12760}
+      Script: {instanceID: 12630}
     - Class: 114
-      Script: {instanceID: 12934}
+      Script: {instanceID: 12680}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12762}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 12936}
     - Class: 114
-      Script: {instanceID: 13086}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 13266}
+      Script: {instanceID: 13052}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 13088}
     - Class: 114
-      Script: {instanceID: 13318}
+      Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13268}
     - Class: 114
-      Script: {instanceID: 13410}
+      Script: {instanceID: 13276}
     - Class: 114
-      Script: {instanceID: 13486}
+      Script: {instanceID: 13320}
+    - Class: 114
+      Script: {instanceID: 13342}
+    - Class: 114
+      Script: {instanceID: 13364}
+    - Class: 114
+      Script: {instanceID: 13404}
+    - Class: 114
+      Script: {instanceID: 13412}
+    - Class: 114
+      Script: {instanceID: 13488}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -325,21 +338,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12534}
+      Script: {instanceID: 12536}
     - Class: 114
-      Script: {instanceID: 12678}
+      Script: {instanceID: 12680}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12930}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13340}
+      Script: {instanceID: 13342}
     - Class: 114
-      Script: {instanceID: 13362}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -429,7 +442,7 @@ ScriptsOnlyBuild:
     className: MotionBlur
   - hash:
       serializedVersion: 2
-      Hash: 5cd090e14d1f83089747c263d8ca6a85
+      Hash: 312b93fff41ce8b52bcc1d6042718bc6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StartLevelCanvas
@@ -771,6 +784,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 1ad87f8ce04709c9b68c9747b0c746a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseLevelCanvas
+  - hash:
+      serializedVersion: 2
       Hash: e244702e0dc05782229aa524e4d757f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -981,7 +1000,7 @@ ScriptsOnlyBuild:
     className: VertexShakeB
   - hash:
       serializedVersion: 2
-      Hash: 269a2421d5cf5cd4526a27e91a99faf6
+      Hash: e260132d30e70863bf536bec59d71db0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthManager
@@ -1213,4 +1232,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Level_01.unity
   - Assets/Scenes/Level_02.unity
-  playerPath: C:/Users/Dora/Desktop/New folder (4)/RollingBall.exe
+  playerPath: C:/Users/Dora/Desktop/New folder (2)/RollingBall.exe

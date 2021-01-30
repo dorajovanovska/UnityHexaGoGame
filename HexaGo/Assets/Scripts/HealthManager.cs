@@ -15,6 +15,9 @@ public class HealthManager : MonoBehaviour
     [HideInInspector]
     public bool PlayerDeath = false;
 
+    [HideInInspector]
+    public bool ZeroLives = false;
+
     public Vector3 _startingPosition;
 
     public Text LivesText;
@@ -50,6 +53,7 @@ public class HealthManager : MonoBehaviour
 
         if (NumberOfLives < 1)
         {
+            ZeroLives = true;
             GameManager.Instance.GameOverCanvas.gameObject.SetActive(true);
             Destroy(gameObject);
             LivesText.text = "Lives: 0";

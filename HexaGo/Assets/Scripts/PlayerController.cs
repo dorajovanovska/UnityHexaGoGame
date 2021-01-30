@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         JumpHeightAfterTurbo = JumpHeight;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         _moveHorizontal = Input.GetAxis("Horizontal");
         _moveVertical = Input.GetAxis("Vertical");
@@ -66,13 +66,17 @@ public class PlayerController : MonoBehaviour
             JumpHeight = JumpHeightAfterTurbo;
         }
 
+        
+        _rigidbody.AddForce(direction * MovementSpeed);
+    }
+
+    private void Update()
+    {
         if (Input.GetButtonDown("Jump") && IsOnThePlatform == true)
         {
             _rigidbody.AddForce(new Vector3(0.0f, JumpHeight, 0.0f), ForceMode.Impulse);
             IsOnThePlatform = false;
         }
-
-        _rigidbody.AddForce(direction * MovementSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)
