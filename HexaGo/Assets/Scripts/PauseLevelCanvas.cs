@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseLevelCanvas : MonoBehaviour
 {
     public GameObject pauseMenuCanvas;
+    public Animator firstCanvas;
 
     readonly private float timeStop = 0.0f;
     readonly private float zeroSeconds = 0.0f;
@@ -49,6 +50,7 @@ public class PauseLevelCanvas : MonoBehaviour
 
             if(healthManager.ZeroLives == true)
             {
+                firstCanvas.SetTrigger("FadeOutTrigger");
                 pauseMenuCanvas.SetActive(false);
                 StartCoroutine(ResumeTime());
             }
