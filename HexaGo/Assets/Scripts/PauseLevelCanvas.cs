@@ -14,6 +14,7 @@ public class PauseLevelCanvas : MonoBehaviour
     private bool timeStopped = false;
 
     public HealthManager healthManager;
+    public PlayerController playerController;
 
     private void Start()
     {
@@ -43,6 +44,16 @@ public class PauseLevelCanvas : MonoBehaviour
             {
                 if(timeStopped == true)
                 {
+                    pauseMenuCanvas.SetActive(false);
+                    StartCoroutine(ResumeTime());
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if(playerController.playerBlackHoleTrigger == true)
+                {
+                    firstCanvas.SetTrigger("FadeOutTrigger");
                     pauseMenuCanvas.SetActive(false);
                     StartCoroutine(ResumeTime());
                 }

@@ -19,6 +19,7 @@ public class GoToTheNextLevel : MonoBehaviour
     public GameObject blackHoleMesh;
     public GameObject blackHole;
 
+    public GameObject first_canvas;
     public Animator transition_goal;
     public Animator transition_canvas;
     public Animator transition_score;
@@ -46,6 +47,8 @@ public class GoToTheNextLevel : MonoBehaviour
 
         if (playerController.hexaGoalTrue == true)
         {
+            first_canvas.SetActive(false);
+
             transition_goal.SetTrigger("GoalAchievedFadeOutTrigger");
 
             portalClosed.GetComponent<MeshRenderer>().enabled = false;

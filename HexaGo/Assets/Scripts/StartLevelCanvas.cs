@@ -13,21 +13,21 @@ public class StartLevelCanvas : MonoBehaviour
 
     void Update()
     {
-        StartCoroutine(LevelStart());
+        if (Input.anyKey)
+        {
+            StartCoroutine(LevelStart());
+        }
+
         if(startCanvasFinished == true)
         {
-            StopCoroutine(LevelStart());
             startCanvasDisabled = true;
         }
     }
 
     IEnumerator LevelStart()
     {
-        if (Input.anyKey)
-        {
-            transition.SetTrigger("FadeInTrigger");
-            yield return new WaitForSeconds(duration);
-            startCanvasFinished = true;
-        }
+           transition.SetTrigger("FadeInTrigger");
+           yield return new WaitForSeconds(duration);
+           startCanvasFinished = true;
     }
 }
