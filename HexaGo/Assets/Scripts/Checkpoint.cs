@@ -7,6 +7,7 @@ public class Checkpoint : MonoBehaviour
     public Transform RespawnTransform;
     public Animator transition;
     public AudioClip checkpointAudioClip;
+    public ParticleSystem checkpointParticleSystem;
     readonly private float secondDuration = 1.0f;
     private float volume = 1.0f;
 
@@ -14,7 +15,10 @@ public class Checkpoint : MonoBehaviour
     {
         HealthManager healthManager = other.gameObject.GetComponent<HealthManager>();
 
-        StartCoroutine(ClipPlayed());    
+        StartCoroutine(ClipPlayed());
+
+        checkpointParticleSystem.transform.SetParent(null);
+        checkpointParticleSystem.Play();
 
         transition.SetTrigger("CheckpointFadeOut");
 

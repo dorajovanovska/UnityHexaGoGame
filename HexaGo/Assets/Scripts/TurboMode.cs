@@ -7,6 +7,8 @@ public class TurboMode : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Turbo;
+    public ParticleSystem turboParticleSystem;
+
     public Animator turboCollectedFadeOut;
     public Animator turboCanvasFadeIn;
     public Animator turboCanvasFadeOut;
@@ -25,9 +27,14 @@ public class TurboMode : MonoBehaviour
     {
         if (other.tag == "Turbo")
         {
+            turboParticleSystem.transform.SetParent(null);
+            turboParticleSystem.Play();
+
             AudioSource.PlayClipAtPoint(turboAudioClip, transform.position);
+
             turboCollectedFadeOut.SetTrigger("TurboCollectedFadeOut");
             turboCanvasFadeIn.SetTrigger("TurboCanvasFadeIn");
+
             turboAndPlayerColided = true;
             Destroy(Turbo);
         }

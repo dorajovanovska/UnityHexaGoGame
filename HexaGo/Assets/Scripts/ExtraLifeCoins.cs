@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ExtraLifeCoins : MonoBehaviour
 {
+    public ParticleSystem extraLifeParticleSystem;
+
     [HideInInspector]
     public int extraLifeValue = 1;
     public Animator extraCanvasText;
@@ -14,6 +16,9 @@ public class ExtraLifeCoins : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            extraLifeParticleSystem.transform.SetParent(null);
+            extraLifeParticleSystem.Play();
+
             AudioSource.PlayClipAtPoint(PickupAudioClip, transform.position);
 
             extraCanvasText.SetTrigger("ExtraLifeFadeInTrigger");
