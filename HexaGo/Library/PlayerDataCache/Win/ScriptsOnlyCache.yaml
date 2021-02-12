@@ -72,34 +72,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.VisualEffectGraph.Editor.dll:
-    - UnityEditor.VFX.Block.AttributeFromCurve
-    - UnityEditor.VFX.Block.ConformToSDF
-    - UnityEditor.VFX.Block.ConformToSphere
-    - UnityEditor.VFX.Block.Drag
-    - UnityEditor.VFX.Block.Orient
-    - UnityEditor.VFX.Block.PositionCircle
-    - UnityEditor.VFX.Block.SetAttribute
-    - UnityEditor.VFX.Block.VectorFieldForce
-    - UnityEditor.VFX.UI.VFXGraphUndoCursor
-    - UnityEditor.VFX.VFXBasicInitialize
-    - UnityEditor.VFX.VFXBasicSpawner
-    - UnityEditor.VFX.VFXBasicUpdate
-    - UnityEditor.VFX.VFXDataParticle
-    - UnityEditor.VFX.VFXGraph
-    - UnityEditor.VFX.VFXPlanarPrimitiveOutput
-    - UnityEditor.VFX.VFXSlot
-    - UnityEditor.VFX.VFXSlotAnimationCurve
-    - UnityEditor.VFX.VFXSlotDirection
-    - UnityEditor.VFX.VFXSlotFloat
-    - UnityEditor.VFX.VFXSlotFloat3
-    - UnityEditor.VFX.VFXSlotGradient
-    - UnityEditor.VFX.VFXSlotOrientedBox
-    - UnityEditor.VFX.VFXSlotTexture2D
-    - UnityEditor.VFX.VFXSlotTexture3D
-    - UnityEditor.VFX.VFXSpawnerBurst
-    - UnityEditor.VFX.VFXSpawnerConstantRate
-    - UnityEditor.VFX.VFXUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -408,29 +380,6 @@ ScriptsOnlyBuild:
     - Class: 2058629509
       Script: {instanceID: 0}
     - Class: 2083052967
-      Script: {instanceID: 0}
-    Assets/Scenes/Level_02.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
       Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -1759,5 +1708,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/IntroVideo.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Level_01.unity
-  - Assets/Scenes/Level_02.unity
-  playerPath: C:/Users/Dora/Desktop/New folder (2)/RollingBall.exe
+  playerPath: C:/Users/Dora/Desktop/New folder (3)/RollingBall.exe
