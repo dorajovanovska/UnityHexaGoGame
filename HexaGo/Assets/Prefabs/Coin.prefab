@@ -683,12 +683,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cc7d7c80c09ab0a41ab5747f3e017268, type: 2}
+      objectReference: {fileID: 2100000, guid: 55da1726359870f4e8611abc276aa545, type: 2}
     - target: {fileID: 7588313604937970066, guid: 45627e35caeebc04da4ddd1f48f54323,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: cc7d7c80c09ab0a41ab5747f3e017268, type: 2}
+      objectReference: {fileID: 2100000, guid: 55da1726359870f4e8611abc276aa545, type: 2}
     - target: {fileID: 7588313604937970066, guid: 45627e35caeebc04da4ddd1f48f54323,
         type: 3}
       propertyPath: m_UseCustomVertexStreams
