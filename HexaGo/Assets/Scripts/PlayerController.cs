@@ -5,6 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject ballMesh;
+    public Material ballDefaultMaterial;
+    public Material ballPurpleMaterial;
+    public Material ballOrangeMaterial;
+    private readonly float changeOrangeMaterialDuration = 3.35f;
+
+    private bool newFromOrangeMaterialFinished = false;
+
     private Rigidbody _rigidbody;
 
     public float MovementSpeed = 10.0f;
@@ -108,6 +116,8 @@ public class PlayerController : MonoBehaviour
             if (hexaCounter == hexaGoal)
             {
                 hexaGoalTrue = true;
+                ballMesh.GetComponent<MeshRenderer>().material = ballPurpleMaterial;
+                ballDefaultMaterial = ballPurpleMaterial;
             }
 
             if(hexaCounter > hexaGoal)
@@ -138,6 +148,7 @@ public class PlayerController : MonoBehaviour
         {
             turbomode.turboAndPlayerColided = false;
             turboFinished = true;
+            ballMesh.GetComponent<MeshRenderer>().material = ballDefaultMaterial;
             turbomode.turboCanvasNull.SetTrigger("TurboCanvasNull");
         }
 
@@ -148,5 +159,22 @@ public class PlayerController : MonoBehaviour
         turboFinished = true;
 
         turbomode.turboCanvasFadeOut.SetTrigger("TurboCanvasFadeOut");
+    }
+
+    public void ChangeToOrangeMaterial()
+    {
+        ballMesh.GetComponent<MeshRenderer>().material = ballOrangeMaterial;
+
+        if (newFromOrangeMaterialFinished == false)
+        {
+            StartCoroutine(EnableDefaultMaterial());
+        }
+    }
+
+    IEnumerator EnableDefaultMaterial()
+    {
+        yield return new WaitForSeconds(changeOrangeMaterialDuration);
+        ballMesh.GetComponent<MeshRenderer>().material = ballDefaultMaterial;
+        newFromOrangeMaterialFinished = true;
     }
 }

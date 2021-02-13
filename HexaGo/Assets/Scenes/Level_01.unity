@@ -431,6 +431,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &71568762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8724142511136885480, guid: b5df034460cda3f4c83fba365c80fa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8526647546282486158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &80877398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,6 +1938,7 @@ MonoBehaviour:
   Player: {fileID: 721233387}
   Turbo: {fileID: 1008439134}
   turboParticleSystem: {fileID: 386214929}
+  playerController: {fileID: 721233390}
   turboCollectedFadeOut: {fileID: 2031619274}
   turboCanvasFadeIn: {fileID: 43916044}
   turboCanvasFadeOut: {fileID: 43916044}
@@ -4056,7 +4063,7 @@ PrefabInstance:
     - target: {fileID: 5690175700508582701, guid: 65fa7f330447def46a73c335fed459b0,
         type: 3}
       propertyPath: m_Name
-      value: Coin (1)
+      value: Coin_01
       objectReference: {fileID: 0}
     - target: {fileID: 5690175700508582702, guid: 65fa7f330447def46a73c335fed459b0,
         type: 3}
@@ -7799,6 +7806,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2139244996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8094702364675745122, guid: 46ef3577dd342c649813edf7ff1e402c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8094702364541686837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c845d29cce98b294ebe2f54d93a7da60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2181028354566456500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8132,7 +8151,7 @@ PrefabInstance:
     - target: {fileID: 5690175700508582701, guid: 65fa7f330447def46a73c335fed459b0,
         type: 3}
       propertyPath: m_Name
-      value: Coin
+      value: Coin_00
       objectReference: {fileID: 0}
     - target: {fileID: 5690175700508582702, guid: 65fa7f330447def46a73c335fed459b0,
         type: 3}
@@ -8396,6 +8415,11 @@ PrefabInstance:
       propertyPath: m_VertexStreams.Array.data[2]
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2875760304611736376, guid: 46ef3577dd342c649813edf7ff1e402c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8094702364675745122, guid: 46ef3577dd342c649813edf7ff1e402c,
         type: 3}
       propertyPath: extraCanvasText
@@ -8406,6 +8430,21 @@ PrefabInstance:
       propertyPath: extraLifeParticleSystem
       value: 
       objectReference: {fileID: 139390935}
+    - target: {fileID: 8094702364675745122, guid: 46ef3577dd342c649813edf7ff1e402c,
+        type: 3}
+      propertyPath: ballMesh
+      value: 
+      objectReference: {fileID: 71568762}
+    - target: {fileID: 8094702364675745122, guid: 46ef3577dd342c649813edf7ff1e402c,
+        type: 3}
+      propertyPath: ballDefaultMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 88063395e6ba2f043b7a23adc7f39dcb, type: 2}
+    - target: {fileID: 8094702364675745122, guid: 46ef3577dd342c649813edf7ff1e402c,
+        type: 3}
+      propertyPath: ballGreenMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: fcc063cbfed77354e908180140331d36, type: 2}
     - target: {fileID: 8094702364675745126, guid: 46ef3577dd342c649813edf7ff1e402c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8594,6 +8633,46 @@ PrefabInstance:
       propertyPath: LevelUpText
       value: 
       objectReference: {fileID: 184047969}
+    - target: {fileID: 8526647546052537012, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: ballMesh
+      value: 
+      objectReference: {fileID: 71568762}
+    - target: {fileID: 8526647546052537012, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: defaultBallMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 88063395e6ba2f043b7a23adc7f39dcb, type: 2}
+    - target: {fileID: 8526647546052537012, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: purpleBallMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: d4102369f76b8e042b04bf7aa7c394dd, type: 2}
+    - target: {fileID: 8526647546052537012, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: extraLifeCoins
+      value: 
+      objectReference: {fileID: 2139244996}
+    - target: {fileID: 8526647546052537012, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: ballDefaultMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 88063395e6ba2f043b7a23adc7f39dcb, type: 2}
+    - target: {fileID: 8526647546052537012, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: ballGreenMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: fcc063cbfed77354e908180140331d36, type: 2}
+    - target: {fileID: 8526647546052537012, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: ballPurpleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: d4102369f76b8e042b04bf7aa7c394dd, type: 2}
+    - target: {fileID: 8526647546052537012, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: ballOrangeMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: fcc063cbfed77354e908180140331d36, type: 2}
     - target: {fileID: 8526647546052537013, guid: b5df034460cda3f4c83fba365c80fa5b,
         type: 3}
       propertyPath: NumberOfLives

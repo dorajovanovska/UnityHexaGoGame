@@ -8,6 +8,7 @@ public class TurboMode : MonoBehaviour
     public GameObject Player;
     public GameObject Turbo;
     public ParticleSystem turboParticleSystem;
+    public PlayerController playerController;
 
     public Animator turboCollectedFadeOut;
     public Animator turboCanvasFadeIn;
@@ -29,6 +30,8 @@ public class TurboMode : MonoBehaviour
         {
             turboParticleSystem.transform.SetParent(null);
             turboParticleSystem.Play();
+
+            playerController.ChangeToOrangeMaterial();
 
             AudioSource.PlayClipAtPoint(turboAudioClip, transform.position);
 

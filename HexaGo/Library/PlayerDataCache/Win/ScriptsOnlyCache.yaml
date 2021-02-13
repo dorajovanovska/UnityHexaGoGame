@@ -1453,7 +1453,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerEnumHistory
   - hash:
       serializedVersion: 2
-      Hash: d814abea490ae841ef2e9babf877f9c9
+      Hash: fed32b478300cbcb76578138dc51253c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1708,4 +1708,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/IntroVideo.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Level_01.unity
-  playerPath: C:/Users/Dora/Desktop/New folder (3)/RollingBall.exe
+  playerPath: C:/Users/Dora/Desktop/New folder (2)/RollingBall.exe
