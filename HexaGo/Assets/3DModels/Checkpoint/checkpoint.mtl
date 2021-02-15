@@ -1,6 +1,3 @@
-newmtl checkpoint_defaultSG
-illum 4
-Kd 0.80 0.80 0.80
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d62a3eaea850ac7ce5645d274636b0b425bb2972f8cb46858e53f6c549c0e1d
+size 98
