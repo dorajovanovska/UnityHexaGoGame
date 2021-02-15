@@ -9,9 +9,6 @@ public class PlayerController : MonoBehaviour
     public Material ballDefaultMaterial;
     public Material ballPurpleMaterial;
     public Material ballOrangeMaterial;
-    private readonly float changeOrangeMaterialDuration = 3.35f;
-
-    private bool newFromOrangeMaterialFinished = false;
 
     private Rigidbody _rigidbody;
 
@@ -136,6 +133,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator TurboDuration()
     {
+        ballMesh.GetComponent<MeshRenderer>().material = ballOrangeMaterial;
+
         turboFinished = false;
 
         TurboMode turbomode = GetComponent<TurboMode>();
@@ -144,37 +143,22 @@ public class PlayerController : MonoBehaviour
 
         HealthManager healthmanager = GetComponent<HealthManager>();
 
-        if(healthmanager.PlayerDeath == true)
+        if(healthmanager.PlayerDiedWithTurbo == true)
         {
             turbomode.turboAndPlayerColided = false;
             turboFinished = true;
-            ballMesh.GetComponent<MeshRenderer>().material = ballDefaultMaterial;
             turbomode.turboCanvasNull.SetTrigger("TurboCanvasNull");
+            ballMesh.GetComponent<MeshRenderer>().material = ballDefaultMaterial;
         }
 
         yield return new WaitForSeconds(turbomode.turboDuration);
+
+        ballMesh.GetComponent<MeshRenderer>().material = ballDefaultMaterial;
 
         turbomode.turboAndPlayerColided = false;
 
         turboFinished = true;
 
         turbomode.turboCanvasFadeOut.SetTrigger("TurboCanvasFadeOut");
-    }
-
-    public void ChangeToOrangeMaterial()
-    {
-        ballMesh.GetComponent<MeshRenderer>().material = ballOrangeMaterial;
-
-        if (newFromOrangeMaterialFinished == false)
-        {
-            StartCoroutine(EnableDefaultMaterial());
-        }
-    }
-
-    IEnumerator EnableDefaultMaterial()
-    {
-        yield return new WaitForSeconds(changeOrangeMaterialDuration);
-        ballMesh.GetComponent<MeshRenderer>().material = ballDefaultMaterial;
-        newFromOrangeMaterialFinished = true;
     }
 }

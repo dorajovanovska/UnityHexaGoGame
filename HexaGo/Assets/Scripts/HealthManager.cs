@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
+    public TurboMode turboMode;
+
     public int StartingHealth = 0;
     public int Health = 0;
     public int NumberOfLives = 3;
@@ -14,6 +16,9 @@ public class HealthManager : MonoBehaviour
 
     [HideInInspector]
     public bool PlayerDeath = false;
+
+    [HideInInspector]
+    public bool PlayerDiedWithTurbo = false;
 
     [HideInInspector]
     public bool ZeroLives = false;
@@ -46,6 +51,11 @@ public class HealthManager : MonoBehaviour
         PlayerDied = true;
 
         PlayerDeath = true;
+
+        if (turboMode.turboAndPlayerColided == true)
+        {
+            PlayerDiedWithTurbo = true;
+        }
 
         LivesText.text = "Lives: " + NumberOfLives.ToString();
 
