@@ -9,7 +9,7 @@ public class HealthManager : MonoBehaviour
 
     public int StartingHealth = 0;
     public int Health = 0;
-    public int NumberOfLives = 3;
+    static public int NumberOfLives = 3;
 
     [HideInInspector]
     public bool PlayerDied = false;

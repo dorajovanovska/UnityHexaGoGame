@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public int Score = 0;
-    public int Life = 0;
+    static public int Score = 0;
     public Text ScoreText;
     public GameObject GameOverCanvas;
 
@@ -23,6 +22,11 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         GameOverCanvas.gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        ScoreText.text = "Score: " + Score.ToString();
     }
 
     public void UpdateScore(int value)

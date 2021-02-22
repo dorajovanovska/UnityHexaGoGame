@@ -88,7 +88,14 @@ public class GoToTheNextLevel : MonoBehaviour
 
         yield return new WaitForSeconds(end_duration);
 
-        SceneManager.LoadScene("MainMenu");
+
+        if (SceneManager.GetActiveScene().buildIndex < 3)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        else
+            SceneManager.LoadScene("MainMenu");
     }
 
     IEnumerator DeleteOpenPortals()
