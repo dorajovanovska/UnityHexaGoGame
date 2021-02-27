@@ -2869,7 +2869,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Red Hexacoin:
 
-    Sets the score to zero'
+    Decreases the score'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28168b02159d76447b6cce2c83c3a248, type: 2}
   m_sharedMaterial: {fileID: -1578919725438312159, guid: 28168b02159d76447b6cce2c83c3a248,
@@ -5577,7 +5577,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Purple Hexacoin:
+  m_text: 'Purple Hexacoins:
 
     One level up'
   m_isRightToLeft: 0

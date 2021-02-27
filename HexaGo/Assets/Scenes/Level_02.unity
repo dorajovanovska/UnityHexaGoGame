@@ -3973,6 +3973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 1545476633}
   firstCanvas: {fileID: 1270204203}
+  levelAudioSource: {fileID: 1591440654}
   healthManager: {fileID: 721233389}
   playerController: {fileID: 721233390}
 --- !u!1 &1296309222

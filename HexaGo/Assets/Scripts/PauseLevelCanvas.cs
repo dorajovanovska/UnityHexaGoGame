@@ -7,6 +7,9 @@ public class PauseLevelCanvas : MonoBehaviour
 {
     public GameObject pauseMenuCanvas;
     public Animator firstCanvas;
+    public AudioSource levelAudioSource;
+    readonly private float levelMusicVolumeDefault = 0.2f;
+    readonly private float levelMusicVolumePaused = 0.05f;
 
     readonly private float timeStop = 0.0f;
     readonly private float zeroSeconds = 0.0f;
@@ -71,6 +74,7 @@ public class PauseLevelCanvas : MonoBehaviour
     IEnumerator StopTime()
     {
         Time.timeScale = timeStop;
+        levelAudioSource.volume = levelMusicVolumePaused;
         yield return new WaitForSeconds(zeroSeconds);
         timeStopped = true;
     }
@@ -79,6 +83,7 @@ public class PauseLevelCanvas : MonoBehaviour
     {
         timeStopped = false;
         Time.timeScale = timeStart;
+        levelAudioSource.volume = levelMusicVolumeDefault;
         yield return new WaitForSeconds(zeroSeconds);
     }
 
