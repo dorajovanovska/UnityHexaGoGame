@@ -71,6 +71,11 @@ public class PauseLevelCanvas : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        Update();
+    }
+
     IEnumerator StopTime()
     {
         Time.timeScale = timeStop;

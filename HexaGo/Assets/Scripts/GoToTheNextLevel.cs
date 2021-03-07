@@ -37,6 +37,8 @@ public class GoToTheNextLevel : MonoBehaviour
     readonly private float seconds_duration = 2.0f;
     private bool openPortalsDeleted = false;
 
+    readonly private int sceneIndexBeforeLast = 3;
+
     void Update()
     {
         if (openPortalsDeleted == false)
@@ -89,7 +91,7 @@ public class GoToTheNextLevel : MonoBehaviour
         yield return new WaitForSeconds(end_duration);
 
 
-        if (SceneManager.GetActiveScene().buildIndex < 3)
+        if (SceneManager.GetActiveScene().buildIndex < sceneIndexBeforeLast)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
