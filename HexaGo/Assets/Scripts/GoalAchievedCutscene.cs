@@ -7,7 +7,7 @@ public class GoalAchievedCutscene : MonoBehaviour
     public Camera mainCamera;
     public Camera cutsceneCamera;
     public PlayerController playerController;
-    readonly private float cutsceneDuration = 2.2f;
+    readonly private float cutsceneDuration = 2.5f;
     private bool cutsceneFinished = false;
 
     readonly private float timeStop = 0.0f;
