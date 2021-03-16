@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public HealthManager healthManager;
 
     static public int Score = 0;
-    private int ScoreAfterGameRestart = 0;
+    readonly private int ScoreAfterGameRestart = 0;
     public Text ScoreText;
     public GameObject GameOverCanvas;
 
@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ScoreText.text = "Score: " + Score.ToString();
-        ScoreAfterGameRestart = Score;
     }
 
     public void UpdateScore(int value)
