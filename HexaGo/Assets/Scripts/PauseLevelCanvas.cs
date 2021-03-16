@@ -15,6 +15,8 @@ public class PauseLevelCanvas : MonoBehaviour
     readonly private float zeroSeconds = 0.0f;
     readonly private float timeStart = 1.0f;
     private bool timeStopped = false;
+    [HideInInspector]
+    public bool mainMenuActivated = false;
 
     public HealthManager healthManager;
     public PlayerController playerController;
@@ -22,6 +24,7 @@ public class PauseLevelCanvas : MonoBehaviour
     private void Start()
     {
         pauseMenuCanvas.SetActive(false);
+        mainMenuActivated = false;
     }
 
     void Update()
@@ -94,6 +97,8 @@ public class PauseLevelCanvas : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        mainMenuActivated = true;
+        GameManager.Score = 0;
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = timeStart;
     }

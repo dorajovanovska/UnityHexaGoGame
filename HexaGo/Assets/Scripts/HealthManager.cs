@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour
 {
     public TurboMode turboMode;
+    public PauseLevelCanvas pauseLevelCanvas;
 
     public int StartingHealth = 0;
     public int Health = 0;
     static public int NumberOfLives = 3;
+    readonly private int NumberOfLivesAfterGameRestart = 3;
 
     [HideInInspector]
     public bool PlayerDied = false;
@@ -74,5 +76,18 @@ public class HealthManager : MonoBehaviour
     {
         NumberOfLives++;
         LivesText.text = "Lives: " + NumberOfLives.ToString();
+    }
+
+    public void RestartLives()
+    {
+        NumberOfLives = NumberOfLivesAfterGameRestart;
+    }
+
+    public void Update()
+    {
+        if(pauseLevelCanvas.mainMenuActivated == true)
+        {
+            NumberOfLives = NumberOfLivesAfterGameRestart;
+        }
     }
 }

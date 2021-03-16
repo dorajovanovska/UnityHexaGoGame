@@ -4629,6 +4629,7 @@ MonoBehaviour:
   pauseMenuCanvas: {fileID: 1545476633}
   firstCanvas: {fileID: 1270204203}
   levelAudioSource: {fileID: 1591440654}
+  mainMenuActivated: 0
   healthManager: {fileID: 721233389}
   playerController: {fileID: 721233390}
 --- !u!1 &1277889629
@@ -9825,6 +9826,11 @@ PrefabInstance:
       propertyPath: GameOverCanvas
       value: 
       objectReference: {fileID: 1570763276}
+    - target: {fileID: 7492301532628353706, guid: 7d93558920da30c4c9f75976e4cc6b7e,
+        type: 3}
+      propertyPath: healthManager
+      value: 
+      objectReference: {fileID: 721233389}
     - target: {fileID: 7492301532628353707, guid: 7d93558920da30c4c9f75976e4cc6b7e,
         type: 3}
       propertyPath: m_Name
@@ -10137,6 +10143,11 @@ PrefabInstance:
       propertyPath: turboMode
       value: 
       objectReference: {fileID: 721233395}
+    - target: {fileID: 8526647546052537013, guid: b5df034460cda3f4c83fba365c80fa5b,
+        type: 3}
+      propertyPath: pauseLevelCanvas
+      value: 
+      objectReference: {fileID: 1270204206}
     - target: {fileID: 8526647546052537014, guid: b5df034460cda3f4c83fba365c80fa5b,
         type: 3}
       propertyPath: m_LocalPosition.x
