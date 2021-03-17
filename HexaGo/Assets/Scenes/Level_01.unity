@@ -5905,7 +5905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Goal achieved! Find a portal!
+  m_text: Goal achieved! Enter the Portal!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ab5ca43e456bad4999c99da3a5b098e, type: 2}
   m_sharedMaterial: {fileID: -4533359954052630139, guid: 5ab5ca43e456bad4999c99da3a5b098e,
@@ -9117,7 +9117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656986515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 115}
+  m_LocalPosition: {x: 0, y: 9, z: 115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 624943079}
