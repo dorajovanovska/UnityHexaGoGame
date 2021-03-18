@@ -7539,6 +7539,7 @@ MonoBehaviour:
   mainCamera: {fileID: 963194227}
   cutsceneCamera: {fileID: 1343880692}
   playerController: {fileID: 721233390}
+  goalAchievedCanvas: {fileID: 278005271}
   pauseLevelCanvas: {fileID: 1270204206}
 --- !u!1 &1418094975 stripped
 GameObject:

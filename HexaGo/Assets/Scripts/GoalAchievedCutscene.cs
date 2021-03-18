@@ -7,6 +7,7 @@ public class GoalAchievedCutscene : MonoBehaviour
     public Camera mainCamera;
     public Camera cutsceneCamera;
     public PlayerController playerController;
+    public GameObject goalAchievedCanvas;
     readonly private float cutsceneDuration = 2.5f;
     private bool cutsceneFinished = false;
 
@@ -19,6 +20,7 @@ public class GoalAchievedCutscene : MonoBehaviour
     {
         mainCamera.enabled = true;
         cutsceneCamera.enabled = false;
+        goalAchievedCanvas.SetActive(false);
     }
 
 
@@ -32,6 +34,7 @@ public class GoalAchievedCutscene : MonoBehaviour
             {
                 StopCoroutine(EnableGoalAchievedCutscene());
                 Time.timeScale = timeResume;
+                goalAchievedCanvas.SetActive(false);
                 pauseLevelCanvas.enabled = true;
                 mainCamera.enabled = true;
                 cutsceneCamera.enabled = false;
@@ -44,6 +47,7 @@ public class GoalAchievedCutscene : MonoBehaviour
     {
         pauseLevelCanvas.enabled = false;
         Time.timeScale = timeStop;
+        goalAchievedCanvas.SetActive(true);
         mainCamera.enabled = false;
         cutsceneCamera.enabled = true;
         yield return new WaitForSecondsRealtime(cutsceneDuration);
