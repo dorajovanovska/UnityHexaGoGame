@@ -25,6 +25,9 @@ public class ExtraLifeCoins : MonoBehaviour
 
             Destroy(gameObject);
 
+            //FEEDBACK: pripaziti na kod koji se nalazi nakon Destroy metode
+            //          postoji mogucnost da se nece izvrsit kako treba jer ce se objekt unistit
+            //          to ujedno znaci i nestajanje ove skripte
             extraCanvasText.SetTrigger("ExtraLifeFadeOutTrigger");
         }
     }

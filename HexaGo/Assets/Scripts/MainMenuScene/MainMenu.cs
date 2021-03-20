@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartFunction()
     {
+        //FEEDBACK: izbjegavati hard kodirane broje, koristiti parametre za loadanje scena
         SceneManager.LoadScene("Level_01");
     }
 

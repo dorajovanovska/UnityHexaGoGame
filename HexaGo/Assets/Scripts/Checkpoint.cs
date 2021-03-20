@@ -15,6 +15,9 @@ public class Checkpoint : MonoBehaviour
     {
         HealthManager healthManager = other.gameObject.GetComponent<HealthManager>();
 
+        //FEEDBACK: ovo ce se pokrenuti paralelno, pustiti zvuk i stisati se, te cekati u prazno
+        //          ukoliko je ideja bila da se ceka kada zavrsi zvuk i onda izvrsi dio koda
+        //          tada ovaj dio koda ispod StartCoroutine metode treba bit u ClipPlayed nakon cekanja
         StartCoroutine(ClipPlayed());
 
         checkpointParticleSystem.transform.SetParent(null);

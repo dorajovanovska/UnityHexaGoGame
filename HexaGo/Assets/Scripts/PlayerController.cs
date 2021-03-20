@@ -94,6 +94,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //FEEDBACK: kada igra krene u smjeru da ima potrebnu za puno razlicitih tagova to znaci da treba razmislit o drugom rijesenju
+        //          ukoliko netko promijeni tag ili se ovdje desi tipfeler nece raditi kako treba
+        //          koristit recimo komponente kao filtar za pojedine tipove
         if(other.gameObject.tag == "Checkpoint")
         {
             PlayerCheckpointTrigger = true;

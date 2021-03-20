@@ -53,6 +53,10 @@ public class GoToTheNextLevel : MonoBehaviour
 
             transition_goal.SetTrigger("GoalAchievedFadeOutTrigger");
 
+            //FEEDBACK: kao javne varijable moglo se koristiti MeshRenderer portalClosed
+            //          umjesto GameObject portalClosed
+            //          tad ne bi trebali koristiti GetComponent i osigurali da je tip onaj koji trazimo
+            //          sto ako ne postoje ovdje trazene komponente? -> NullReference i error
             portalClosed.GetComponent<MeshRenderer>().enabled = false;
             portalMeshClosed.GetComponent<MeshCollider>().enabled = false;
 
@@ -78,6 +82,10 @@ public class GoToTheNextLevel : MonoBehaviour
         transition_countdown.SetTrigger("CountFadeOut");
 
         transition_level_completed.SetTrigger("LevelCompletedFadeInTrigger");
+
+        //FEEDBACK: pripaziti kada se objekti unistavaju iz drugog objekta
+        //          bolje se voditi logikom da postoji neka Die ili Destroy metoda na igracu
+        //          tada se on brine o svim svojim varijablama i stanjima i unisti se cisto
         Destroy(Player);
 
         yield return new WaitForSeconds(end_duration);
